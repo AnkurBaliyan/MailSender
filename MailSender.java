@@ -29,7 +29,7 @@ public class MailSender {
         Session mailSession = Session.getDefaultInstance(props);
         try {
             Message mailMessage = new MimeMessage(mailSession);
-            String ccList[]=new String[]{"sales@sparktg.com","sudhir.sparktg@gmail.com","ankur@sparktg.com"};
+            String ccList[]=new String[]{"sales@gmail.com","sudhir.gmail@gmail.com","ankur@gmail.com"};
             for(String cc: ccList){
             	mailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(cc));
             }
@@ -49,7 +49,7 @@ public class MailSender {
         }
     }
     public static void main (String args[]){
-        String sendTo[]=new String[]{"ankur@sparktg.com"};
+        String sendTo[]=new String[]{"ankur@gmail.com"};
         String subject = "SparkTG Outstanding Payment";   //"Urgent KYC Documentation Update";
         String message ="This is an auto-generated email to inform you that the payment for your invoices till January has not been cleared yet.\n\nWe have not received your payment yet. Please pay the outstanding amount latest by 12-03-2018 otherwise your service will be terminated W.E.F 15-03-2018.\n\nYou can contact Mr. Sudhir (9250404164) for any billing related queries.\n\nIf you have already made the payment, please ignore this email.";
         for(String sendto: sendTo){
